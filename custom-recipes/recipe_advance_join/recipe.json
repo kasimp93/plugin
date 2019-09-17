@@ -87,7 +87,7 @@
         },
         {
             "name": "Operator",
-            "label": "operator",
+            "label": "Operator",
             "type": "SELECT",
             "selectChoices": [
                 {
