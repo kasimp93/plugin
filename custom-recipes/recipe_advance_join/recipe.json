@@ -101,12 +101,12 @@
         ]
         },
         {
-            "name": "columns_1",
+            "name": "Select columns you want to retrieve from left dataset",
             "type": "COLUMNS",
             "columnRole":"input_A_role"
         },
         {
-            "name": "columns_2",
+            "name": "Select columns you want to retrieve from right dataset",
             "type": "COLUMNS",
             "columnRole":"input_B_role"
         }
