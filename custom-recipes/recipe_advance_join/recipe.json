@@ -76,12 +76,12 @@
 
     "params": [
         {
-            "name": "Join key for the left dataset",
+            "name": "Join keys for the left dataset",
             "type": "COLUMNS",
             "columnRole":"input_A_role"
         },
         {
-            "name": "Join key for the right dataset",
+            "name": "Join keys for the right dataset",
             "type": "COLUMNS",
             "columnRole":"input_B_role"
         },
