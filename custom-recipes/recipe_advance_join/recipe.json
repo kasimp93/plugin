@@ -86,7 +86,7 @@
             "columnRole":"input_B_role"
         },
         {
-            "name": "operator",
+            "name": "Operator",
             "label": "operator",
             "type": "SELECT",
             "selectChoices": [
