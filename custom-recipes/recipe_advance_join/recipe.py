@@ -1,19 +1,15 @@
-# Code for custom code recipe recipe_advance_join (imported from a Python recipe)
-
-# To finish creating your custom recipe from your original PySpark recipe, you need to:
-#  - Declare the input and output roles in recipe.json
-#  - Replace the dataset names by roles access in your code
-#  - Declare, if any, the params of your custom recipe in recipe.json
-#  - Replace the hardcoded params values by acccess to the configuration map
-
-# See sample code below for how to do that.
-# The code of your original recipe is included afterwards for convenience.
-# Please also see the "recipe.json" file for more information.
-
 # import the classes for accessing DSS objects from the recipe
 import dataiku
-# Import the helpers for custom recipes
 from dataiku.customrecipe import *
+from dataiku import pandasutils as pdu
+import pandas as pd
+import json
+import time
+import dataikuapi
+from dataikuapi import JoinRecipeCreator
+from dataiku import api_client as client
+from dataiku.sql import Column, Constant, Expression, Interval, SelectQuery, Window, TimeUnit, JoinTypes, ColumnType, toSQL
+from dataiku.core.sql import SQLExecutor2, HiveExecutor
 
 # Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
 # or more dataset to each input and output role.
@@ -75,15 +71,7 @@ columns_right = get_recipe_config()['columns_2']
 # - The rows that were present only on the right
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-from dataiku import pandasutils as pdu
-import pandas as pd
-import json
-import time
-import dataikuapi
-from dataikuapi import JoinRecipeCreator
-from dataiku import api_client as client
-from dataiku.sql import Column, Constant, Expression, Interval, SelectQuery, Window, TimeUnit, JoinTypes, ColumnType, toSQL
-from dataiku.core.sql import SQLExecutor2, HiveExecutor
+
 
 ####################################
 ####################################
