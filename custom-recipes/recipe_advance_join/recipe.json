@@ -3,7 +3,7 @@
     // Meta data for display purposes
     "meta" : {
         "label" : "Advance Join",
-        "description" : "Custom recipe",
+        "description" : "Gives you left, right and inner join datasets as output",
         "icon" : "icon-puzzle-piece"
     },
 
