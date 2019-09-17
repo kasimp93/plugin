@@ -103,7 +103,6 @@
             "columnRole":"input_B_role"
         }
 
-        // The 'COLUMNS' type works in the same way, except that it is a list of strings.
     ],
 
     // The field "resourceKeys" holds a list of keys that allows to limit the number
