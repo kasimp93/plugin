@@ -76,12 +76,12 @@
 
     "params": [
         {
-            "name": "key_1",
+            "name": "Join key for the left dataset",
             "type": "COLUMNS",
             "columnRole":"input_A_role"
         },
         {
-            "name": "key_2",
+            "name": "Join key for the right dataset",
             "type": "COLUMNS",
             "columnRole":"input_B_role"
         },
@@ -92,7 +92,7 @@
             "selectChoices": [
                 {
                     "value": "AND",
-                    "label": "AND"
+                    "label": "Match when both the conditions match"
                 },
                 {
                     "value": "OR",
