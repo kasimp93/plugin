@@ -44,7 +44,7 @@
         {
             "name": "left_output",
             "label": "left output displayed name",
-            "description": "what left output means",
+            "description": "left join result",
             "arity": "UNARY",
             "required": false,
             "acceptsDataset": true
@@ -52,7 +52,7 @@
         {
             "name": "right_output",
             "label": "right output displayed name",
-            "description": "what right output means",
+            "description": "right join result",
             "arity": "UNARY",
             "required": false,
             "acceptsDataset": true
@@ -60,7 +60,7 @@
         {
             "name": "inner_output",
             "label": "inner output displayed name",
-            "description": "what inner output means",
+            "description": "inner join result",
             "arity": "UNARY",
             "required": false,
             "acceptsDataset": true
