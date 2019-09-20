@@ -2,20 +2,13 @@
 {
     // Meta data for display purposes
     "meta" : {
-        "label" : "Custom recipe from recipe recipe_advance_join",
-        "description" : "Custom recipe",
+        "label" : "Advance Join",
+        "description" : "Gives you left, right and inner join datasets as output",
         "icon" : "icon-puzzle-piece"
     },
 
     "kind" : "PYTHON",
     
-
-    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
-    // or more dataset to each input and output role.
-
-    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
-    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
-    // associate no dataset with the role.
 
     "inputRoles" : [
         {
@@ -37,14 +30,13 @@
             //,'mustBeSQL': true
             // ,'mustBeStrictlyType':'HDFS'
         }
-        // ...
     ],
 
     "outputRoles" : [
         {
             "name": "left_output",
             "label": "left output displayed name",
-            "description": "what left output means",
+            "description": "left join result",
             "arity": "UNARY",
             "required": false,
             "acceptsDataset": true
@@ -52,7 +44,7 @@
         {
             "name": "right_output",
             "label": "right output displayed name",
-            "description": "what right output means",
+            "description": "right join result",
             "arity": "UNARY",
             "required": false,
             "acceptsDataset": true
@@ -60,7 +52,7 @@
         {
             "name": "inner_output",
             "label": "inner output displayed name",
-            "description": "what inner output means",
+            "description": "inner join result",
             "arity": "UNARY",
             "required": false,
             "acceptsDataset": true
@@ -76,42 +68,41 @@
 
     "params": [
         {
-            "name": "key_1",
+            "name": "Join keys for the left dataset",
             "type": "COLUMNS",
             "columnRole":"input_A_role"
         },
         {
-            "name": "key_2",
+            "name": "Join keys for the right dataset",
             "type": "COLUMNS",
             "columnRole":"input_B_role"
         },
         {
-            "name": "operator",
-            "label": "operator",
+            "name": "Operator",
+            "label": "Operator",
             "type": "SELECT",
             "selectChoices": [
                 {
                     "value": "AND",
-                    "label": "AND"
+                    "label": "Match when all the conditions are satisfied"
                 },
                 {
                     "value": "OR",
-                    "label": "OR"
+                    "label": "Match when one of the conditions are satisfied"
                 }
         ]
         },
         {
-            "name": "columns_1",
+            "name": "Columns from left dataset",
             "type": "COLUMNS",
             "columnRole":"input_A_role"
         },
         {
-            "name": "columns_2",
+            "name": "Columns from right dataset",
             "type": "COLUMNS",
             "columnRole":"input_B_role"
         }
 
-        // The 'COLUMNS' type works in the same way, except that it is a list of strings.
     ],
 
     // The field "resourceKeys" holds a list of keys that allows to limit the number
