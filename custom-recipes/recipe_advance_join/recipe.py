@@ -52,15 +52,15 @@ for key in range(len(key_a)):
     globals()['join_cond_'+str(key)] = join_cond.and_(Column(key_a[key], input_A_names[0]).eq_null_unsafe(Column(key_b[key], input_B_names[0])))
     join_conds.append(globals()['join_cond_'+str(key)])  
     
-for i in joins:
+for join in joins:
     query = SelectQuery()
     query.select_from(input_A_datasets[0], alias = input_A_names[0])
     for j in columns_left:
         query.select(Column(j, input_A_names[0]),alias = j)
     for k in columns_right:
         query.select(Column(k, input_B_names[0]),alias = k) 
-    query.join(input_B_datasets[0], i, join_conds, operatorBetweenConditions = operator , alias= input_B_names[0])
-    globals()['sql_'+str(i)] = toSQL(query, input_A_datasets[0])
+    query.join(input_B_datasets[0], join, join_conds, operatorBetweenConditions = operator , alias= input_B_names[0])
+    globals()['sql_'+str(join)] = toSQL(query, input_A_datasets[0])
 
 
 e = SQLExecutor2()
